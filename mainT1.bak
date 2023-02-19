@@ -17,37 +17,10 @@
   (draw-board))
 
 (define (opcion2)
-  (draw-board)
-  (fase-uno-manual))
-  ;(generar-numero-aleatorio))
+  (generar-numero-aleatorio))
 
 (define (opcion3)
   (displayln "Has seleccionado la opción 3."))
-
-(define current-player 1)
-
-(define (player-1-turn)
-  (displayln "Turno del jugador 1: ")
-  (read)
-  (set! current-player  2) ; Cambia el turno actual al jugador 2
-  )
-
-(define (player-2-turn)
-  (displayln "Turno del jugador 2: ")
-  (read)
-  (set! current-player 1) ; Cambia el turno actual al jugador 1
-)
-
-(define cant-turnos 0)
-
-(define (fase-uno-manual)
-  (let loop ()
-    (let ()
-      (cond
-        [(= current-player 1) (player-1-turn)]
-        [(= current-player 2) (player-2-turn)]
-        )
-      (loop))))
 
 ;#####################################################
 ;#################  BOARD  ###########################
@@ -100,4 +73,5 @@
             ((= opcion 3) (opcion3))
             (else (displayln "Opción inválida. Intenta de nuevo.")))
       (loop))))
-(main)
+
+;(main)
